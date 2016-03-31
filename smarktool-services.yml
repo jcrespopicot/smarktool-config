@@ -1,0 +1,42 @@
+---
+eureka:
+ instance:
+    nonSecurePort: ${server.port:8082}
+    leaseRenewalIntervalInSeconds: 10
+ client:
+    healthcheck:
+      enabled: true
+
+server:
+  port: 8082
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/iems
+    username: iems
+    password: iems
+
+  jpa:
+    database: MYSQL
+    hibernate:
+      ddl-auto: validate
+
+  freemarker:
+    enabled: false           # Ignore Eureka dashboard FreeMarker templates
+
+  thymeleaf:
+    cache: false             # Allow Thymeleaf templates to be reloaded at runtime
+    prefix: classpath:/templates/    # Trailing / mandatory
+
+# Map the error path to error template (for Thymeleaf)
+error:
+  path=/error
+
+info:
+  build:
+    artifact: @project.artifactId@
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+
