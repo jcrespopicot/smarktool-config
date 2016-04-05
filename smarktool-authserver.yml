@@ -1,0 +1,23 @@
+---
+server:
+  port: 8100
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/smarktool	
+    username: iems
+    password: iems
+
+  jpa:
+    database: MYSQL
+    hibernate:
+      ddl-auto: validate
+
+security:
+  user:
+    password: password
+	
+# Map the error path to error template (for Thymeleaf)
+error:
+  path=/error
