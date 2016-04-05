@@ -1,0 +1,11 @@
+---
+server:
+  port: 8088
+
+zuul:
+  routes:
+    smarktool-services: /smarktool-services/**
+
+# Map the error path to error template (for Thymeleaf)
+error:
+  path=/error
