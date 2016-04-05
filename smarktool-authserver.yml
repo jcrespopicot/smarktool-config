@@ -1,7 +1,12 @@
 ---
 server:
   port: 8100
+  contextPath: /userauth 
 
+security:
+  user:
+    password: password
+  
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
@@ -14,10 +19,5 @@ spring:
     hibernate:
       ddl-auto: validate
 
-security:
-  user:
-    password: password
-	
-# Map the error path to error template (for Thymeleaf)
 error:
   path=/error
