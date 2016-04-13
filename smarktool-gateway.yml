@@ -4,7 +4,7 @@ server:
 
 zuul:
   routes:
-    smarktool-services: /smarktool-services/**
+    smarktool-services: /api/services/**
 
 # Map the error path to error template (for Thymeleaf)
 error:
