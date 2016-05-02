@@ -4,10 +4,10 @@ server:
 
 spring:
   cloud:
-	inetutils:
-		ignoredInterfaces:
-			- docker0
-			- veth.*
+    inetutils:
+      ignoredInterfaces:
+        - docker0
+        - veth.*
 		
   datasource:
     driverClassName: com.mysql.jdbc.Driver
