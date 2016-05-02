@@ -8,7 +8,6 @@ spring:
       ignoredInterfaces:
         - docker0
         - veth.*
-		
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://192.168.1.102:3306/iems
