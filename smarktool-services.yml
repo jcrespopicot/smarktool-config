@@ -24,3 +24,12 @@ spring:
 # Map the error path to error template (for Thymeleaf)
 error:
   path=/error
+
+eureka:
+# Register our microservices to Eureka using hostnames in a Docker environment will not work, they will all get 
+# one and the same hostname. Instead we configure them to use its IP address during registration with Eureka.
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.1.102:8761/eureka/
