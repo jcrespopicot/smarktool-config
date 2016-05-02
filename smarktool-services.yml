@@ -3,10 +3,11 @@ server:
   port: 8082
 
 spring:
-  inetutils:
-      ignoredInterfaces:
-        - docker0
-        - veth.*
+  cloud:
+	inetutils:
+		ignoredInterfaces:
+			- docker0
+			- veth.*
 		
   datasource:
     driverClassName: com.mysql.jdbc.Driver
