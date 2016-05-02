@@ -10,7 +10,8 @@ spring:
         - veth.*
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://192.168.1.102:3306/iems
+#    url: jdbc:mysql://192.168.1.102:3306/iems
+    url: jdbc:mysql://127.0.0.1:3306/iems
     username: iems
     password: iems
 
@@ -37,4 +38,5 @@ eureka:
     preferIpAddress: true
   client:
     serviceUrl:
-      defaultZone: http://192.168.1.102:8761/eureka/
+#      defaultZone: http://192.168.1.102:8761/eureka/
+      defaultZone: http://127.0.0.1:8761/eureka/
